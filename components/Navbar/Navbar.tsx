@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import logo from "../../images/logo.svg";
+import iconHamburger from '../../images/icon-hamburger.svg';
 
 const Header = styled.header`
   display: flex;
@@ -9,12 +10,14 @@ const Header = styled.header`
 function Navbar() {
   return (
     <Header>
-      <div>
+      <div className='logo'>
         <a href="#">
           <img src={logo} alt="logo" />
         </a>
       </div>
-      <nav>HHHHHHHH</nav>
+      <div className='hamburger'>
+        <img src={iconHamburger} alt='' />
+      </div>
     </Header>
   );
 }
