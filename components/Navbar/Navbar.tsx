@@ -12,6 +12,7 @@ const Header = styled.header`
 const Dialog = styled.div`
   color: ${(props) => props.theme.colors.primary.darkBlue};
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0 , 0.4));
+  font-weight: 700;
   position: absolute;
   top: 0;
   right: 0;
@@ -21,7 +22,7 @@ const Dialog = styled.div`
 
 const Nav = styled.nav`
   background-color: #fff;
-  margin: 30vh 10px 0;
+  margin: 15vh 10px 0;
 `;
 
 const List = styled.ul`
