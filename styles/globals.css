@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media screen and (min-width: 992px) {
+  body {
+    margin: 85px 125px;
+  }
+}

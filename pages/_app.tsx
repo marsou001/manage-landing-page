@@ -10,9 +10,16 @@ const theme = {
     neutral: {
       darkGrayishBlue: "hsl(227, 12%, 61%)",
       veryDarkBlue: "hsl(233, 12%, 13%)",
-      veryPaleRed: "hsl(13, 100%, 96%)",
-      VeryLightGray: "hsl(0, 0%, 98%)",
+      veryPaleRed: "hsl(12, 92%, 72%)",
+      veryLightGray: "hsl(0, 0%, 98%)",
     },
+  },
+  breakpoints: {
+    xs: '500px',
+    sm: '768px',
+    md: '992px',
+    lg: '1200px',
+    xl: '1900px',
   },
 };
 
