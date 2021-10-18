@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Ma from './Mana'
+import Navbar from './Navbar';
 
 it("renders", () => {
-  render(<Ma />);
+  render(<Navbar />);
 
-  expect(screen.getByTestId('ma')).toBeInTheDocument();
+  expect(screen.getByTestId('header')).toBeInTheDocument();
 });

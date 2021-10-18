@@ -6,7 +6,7 @@ import ListItemLink from "./ListItemLink/ListItemLink";
 const Container = styled.nav`
   font-size: 0.8rem;
   display: none;
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     display: initial;
   }
 `;
