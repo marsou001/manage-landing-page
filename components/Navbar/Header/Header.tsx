@@ -14,7 +14,7 @@ const Container = styled.header`
 `;
 function Header({ isActive, handleClick, handleKeyDown }) {
   return (
-    <Container data-testid='header'>
+    <Container>
       <Logo>
         <a href="#" tabIndex={isActive ? -1 : 0}>
           <img src={logo} alt="logo" />
@@ -26,7 +26,7 @@ function Header({ isActive, handleClick, handleKeyDown }) {
         onClick={handleClick}
         onKeyDown={handleKeyDown}
       >
-        <img src={isActive ? iconClose : iconHamburger} alt="" />
+        <img src={isActive ? iconClose : iconHamburger} alt="show/hide navigation" />
       </Hamburger>
       <Nav />
       <GetStartedButton href="#">Get Started</GetStartedButton>
