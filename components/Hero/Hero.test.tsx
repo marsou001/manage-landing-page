@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { getByAltText } from '@testing-library/dom';
+import { screen } from '@testing-library/dom';
 import Hero from './Hero';
 
 describe("Hero", () => {
@@ -8,12 +8,22 @@ describe("Hero", () => {
   });
 
   it("contains the SVG illustration", () => {
-    const Ill = getByAltText(header, 'logo');
-    expect(Logo).toBeInTheDocument();
+    const image = screen.getByRole('img');
+    expect(image).toBeInTheDocument();
   })
 
-  it("contains the hamburger logo", () => {
-    const Hamburger = getByAltText(header, "show/hide navigation");
-    expect(Hamburger).toBeInTheDocument();
+  it("contains header", () => {
+    const header = screen.getByRole('heading');
+    expect(header).toBeInTheDocument();
+  })
+
+  it("contains pagagraph", () => {
+    const pagagraph = screen.getByText("Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.");
+    expect(pagagraph).toBeInTheDocument();
+  })
+
+  it("contains call to action button", () => {
+    const callToAction = screen.getByRole("button");
+    expect(callToAction).toBeInTheDocument();
   })
 });

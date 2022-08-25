@@ -16,7 +16,7 @@ const Container = styled.div`
 function IllustrationIntro() {
   return (
     <Container>
-      <img src={illustrationIntro} className="illustration-intro" alt="illustration-intro" />
+      <img src={illustrationIntro} className="illustration-intro" alt="statistics" />
     </Container>
   )
 }

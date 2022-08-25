@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Header = styled.h1`
-  color: ${props => props.theme.colors.primary.darkBlue};
+  color: ${props => props.theme.colors?.primary.darkBlue};
   line-height: 3rem;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.md}) {
     font-size: 2.5rem;
@@ -17,7 +17,7 @@ const Header = styled.h1`
 `;
 
 const Paragraph = styled.p`
-  color: ${props => props.theme.colors.neutral.darkGrayishBlue};
+  color: ${props => props.theme.colors?.neutral.darkGrayishBlue};
   line-height: 1.7rem;
   margin-bottom: 1.5rem;
 `;
@@ -40,7 +40,7 @@ function TextIntro() {
       <Header>
         Bring everyone together to build better Products.
       </Header>
-      <Paragraph>Manage makes it simple for software teams to plan day-to-day tasks while keeping the largger team goas in view.</Paragraph>
+      <Paragraph>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</Paragraph>
       <CallToAction>Get Started</CallToAction>
     </Container>
   );
