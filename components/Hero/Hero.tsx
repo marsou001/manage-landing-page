@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  margin-bottom: 60px;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.md}) {
     flex-direction: row-reverse;
     justify-content: space-between;
