@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import illustrationIntro from '../../../images/illustration-intro.svg';
+import illustrationIntro from '../../../public/images/illustration-intro.svg';
 
 const Container = styled.div`
   width: 100%;

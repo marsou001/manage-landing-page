@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "styled-components";
+import { Theme } from "../types";
 
-const theme = {
+const theme: Theme = {
   colors: {
     primary: {
       brightRed: "hsl(12, 88%, 59%)",

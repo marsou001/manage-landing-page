@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import logo from "../../../images/logo.svg";
-import iconHamburger from "../../../images/icon-hamburger.svg";
-import iconClose from "../../../images/icon-close.svg";
+import logo from "../../../public/images/logo.svg";
+import iconHamburger from "../../../public/images/icon-hamburger.svg";
+import iconClose from "../../../public/images/icon-close.svg";
 import Hamburger from "./Hamburger/Hamburger";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav/Nav";
 import GetStartedButton from "./GetStartedButton/GetStartedButton";
+import CallToAction from "../../../shared/ui/CallToAction";
 
 const Container = styled.header`
   display: flex;

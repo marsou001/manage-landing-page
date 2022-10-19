@@ -20,3 +20,23 @@ a {
     margin: 85px 125px;
   }
 }
+
+.splide__track {
+  overflow: initial !important;
+}
+
+.splide__pagination.splide__pagination--ltr {
+  margin-top: 30px;
+  position: relative;
+  bottom: 30px;
+}
+
+.splide__pagination__page {
+  border: 1px solid hsl(12, 88%, 59%) !important;
+  background-color: #fff !important;
+}
+
+.splide__pagination__page.is-active {
+  border: 1px solid hsl(12, 88%, 59%) !important;
+  background-color: hsl(12, 88%, 59%) !important;
+}

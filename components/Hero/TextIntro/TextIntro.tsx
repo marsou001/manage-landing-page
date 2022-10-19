@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import CallToAction from "../../../shared/ui/CallToAction";
 import Header from './Header/Header';
 import Paragraph from './Paragraph/Paragraph';
-import CallToAction from './CallToAction/CallToAction';
 
 const Container = styled.div`
   text-align: center;
