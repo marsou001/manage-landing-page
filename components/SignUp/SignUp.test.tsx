@@ -13,10 +13,8 @@ describe("SignUp", () => {
   // })
 
   it("contains paragraph", () => {
-    const paragraph = screen.getByRole('paragraph');
+    const paragraph = screen.getByText("Simplify how your team works today.")
     expect(paragraph).toBeInTheDocument();
-    const content = "Simplify how your team works today.";
-    expect(paragraph).toContain(content);
   })
 
   it("contains button", () => {
@@ -24,7 +22,7 @@ describe("SignUp", () => {
     expect(button).toBeInTheDocument();
 
     const content = "Get Started";
-    expect(button).toContain(content);
+    expect(button).toHaveTextContent(content);
   })
 });
 

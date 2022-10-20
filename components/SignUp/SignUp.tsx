@@ -3,11 +3,11 @@ import CallToAction from "../../shared/ui/CallToAction";
 import Props from "../../types/props";
 
 const Container = styled.section`
-  color: ${(props: Props) => props.theme.colors.neutral.veryLightGray};
-  background-color: ${(props: Props) => props.theme.colors.primary.brightRed};
+  color: ${(props: Props) => props.theme.colors?.neutral.veryLightGray};
+  background-color: ${(props: Props) => props.theme.colors?.primary.brightRed};
   text-align: center;
   padding: 40px 20px 60px;
-  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
     padding-inline: 125px;
     display: flex;
     justify-content: space-between;
