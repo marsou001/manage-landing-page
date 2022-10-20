@@ -18,17 +18,17 @@ function CallToAction(props: CallToActionProps) {
   `;
 
   const StyledComponent = props.scheme === undefined || props.scheme === 'main' ? styled.button`
-    color: ${(props: CallToActionProps) => props.theme.colors.neutral.veryLightGray};
-    background-color: ${(props: CallToActionProps) => props.theme.colors.primary.brightRed};
+    color: ${(props: CallToActionProps) => props.theme.colors?.neutral.veryLightGray};
+    background-color: ${(props: CallToActionProps) => props.theme.colors?.primary.brightRed};
     &:hover {
       background-color: hsla(12, 88%, 59%, 0.8);
     }
     ${common}
   ` : styled.button`
-    color: ${(props: CallToActionProps) => props.theme.colors.primary.brightRed};
-    background-color: ${(props: CallToActionProps) => props.theme.colors.neutral.veryLightGray};
+    color: ${(props: CallToActionProps) => props.theme.colors?.primary.brightRed};
+    background-color: ${(props: CallToActionProps) => props.theme.colors?.neutral.veryLightGray};
     &:hover {
-      background-color: ${(props: CallToActionProps) => props.theme.colors.primary.brightRed};
+      background-color: ${(props: CallToActionProps) => props.theme.colors?.primary.brightRed};
     }
     ${common}
   `;

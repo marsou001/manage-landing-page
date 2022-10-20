@@ -13,7 +13,9 @@ describe("Hero", () => {
   })
 
   it("contains header", () => {
-    const header = screen.getByRole('heading');
+    const header = screen.getByRole('heading', {
+      level: 1
+    });
     expect(header).toBeInTheDocument();
   })
 
