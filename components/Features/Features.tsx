@@ -5,9 +5,13 @@ import Left from './Left/Left';
 const Container = styled.section`
   display: flex;
   flex-direction: column;
+  margin-inline: 20px;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     flex-direction: row;
     justify-content: space-between;
+  }
+  @media screen and (min-width: ${(props) => props.theme.breakpoints?.md}) {
+    margin-inline: 125px;
   }
 `;
 

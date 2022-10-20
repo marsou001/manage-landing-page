@@ -6,13 +6,17 @@ import Hamburger from "./Hamburger/Hamburger";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav/Nav";
 import GetStartedButton from "./GetStartedButton/GetStartedButton";
-import CallToAction from "../../../shared/ui/CallToAction";
 
 const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-inline: 20px;
+  @media screen and (min-width: ${(props) => props.theme.breakpoints?.md}) {
+    margin-inline: 125px;
+  }
 `;
+
 function Header({ isActive, handleClick, handleKeyDown }) {
   return (
     <Container>
