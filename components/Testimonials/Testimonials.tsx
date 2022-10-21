@@ -3,17 +3,18 @@ import { Testimonial as TTestimonial, Theme } from '../../types';
 import Title from "../../shared/ui/Title";
 import Testimonial from "./Testimonial/Testimonial";
 import CallToAction from "../../shared/ui/CallToAction";
-import { Splide, SplideTrack, SplideSlide, Options } from '@splidejs/react-splide';
+import { Splide, SplideSlide, Options } from '@splidejs/react-splide';
 import '@splidejs/react-splide/dist/css/splide.min.css';
-
-type TestimonialsCarouselIndicatorProps = {
-  theme?: Theme;
-  isCurrentSlide: boolean;
-}
 
 const Container = styled.section`
   text-align: center;
   overflow-y: hidden;
+  &::-webkit-scrollbar {
+    background: transparent !important;
+    width: 0 !important;
+  }           
+  scrollbar-color: transparent transparent !important;
+  scrollbar-width: none !important;
 `;
 
 const testimonials: TTestimonial[] = [

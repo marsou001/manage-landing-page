@@ -28,7 +28,7 @@ function CallToAction(props: CallToActionProps) {
     color: ${(props: CallToActionProps) => props.theme.colors?.primary.brightRed};
     background-color: ${(props: CallToActionProps) => props.theme.colors?.neutral.veryLightGray};
     &:hover {
-      background-color: ${(props: CallToActionProps) => props.theme.colors?.primary.brightRed};
+      color: hsla(12, 88%, 59%, 0.6);
     }
     ${common}
   `;
