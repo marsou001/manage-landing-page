@@ -4,6 +4,7 @@ import Features from "../components/Features/Features";
 import Head from "next/head";
 import Testimonials from "../components/Testimonials/Testimonials";
 import SignUp from "../components/SignUp/SignUp";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
   return (    
@@ -19,6 +20,7 @@ export default function Home() {
         <Features />
         <Testimonials />
         <SignUp />
+        <Footer />
       </main>
     </>
   );

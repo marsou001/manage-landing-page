@@ -2,7 +2,8 @@
 
 body {
   padding: 0;
-  margin: 35px 0px;
+  margin-top: 35px;
+  margin-inline: 0px;
   font-family: "Be Vietnam Pro", Verdana, sans-serif;
 }
 
@@ -17,7 +18,7 @@ a {
 
 @media screen and (min-width: 992px) {
   body {
-    margin-block: 85px;
+    margin-top: 85px;
   }
 }
 
