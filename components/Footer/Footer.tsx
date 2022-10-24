@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "../../shared/ui/Logo";
 import Props from '../../types/props';
+import CopyrightNotice from "./CopyrightNotice/CopyrightNotice";
 import NavList from "./NavList/NavList";
 import SocialMediaLinks from "./SocialMediaLinks/SocialMediaLinks";
 import SubscribeForm from "./SubscribeForm/SubscribeForm";
@@ -18,6 +19,7 @@ function Footer() {
       <NavList />
       <SocialMediaLinks />
       <Logo scheme="main" />
+      <CopyrightNotice />
     </Container>
   )
 }
