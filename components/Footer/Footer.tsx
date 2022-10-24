@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Logo from "../../shared/ui/Logo";
 import Props from '../../types/props';
 import NavList from "./NavList/NavList";
 import SocialMediaLinks from "./SocialMediaLinks/SocialMediaLinks";
@@ -16,6 +17,7 @@ function Footer() {
       <SubscribeForm />
       <NavList />
       <SocialMediaLinks />
+      <Logo scheme="main" />
     </Container>
   )
 }
