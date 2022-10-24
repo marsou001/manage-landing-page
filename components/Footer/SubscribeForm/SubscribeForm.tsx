@@ -4,6 +4,7 @@ import Props from '../../../types/props';
 const Container = styled.form`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 45px;
 `;
 
 const SubscribeFormInput = styled.input`

@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  margin-bottom: 45px;
   >ul {
+    font-size: .8rem;
     list-style-type: none;
     column-count: 2;
     padding-left: 25px;
     >li {
-      font-weight: 400;
       padding-block: 10px;
     }
   }

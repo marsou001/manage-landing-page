@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Props from '../../types/props';
 import NavList from "./NavList/NavList";
+import SocialMediaLinks from "./SocialMediaLinks/SocialMediaLinks";
 import SubscribeForm from "./SubscribeForm/SubscribeForm";
 
 const Container = styled.footer`
@@ -14,6 +15,7 @@ function Footer() {
     <Container>
       <SubscribeForm />
       <NavList />
+      <SocialMediaLinks />
     </Container>
   )
 }
