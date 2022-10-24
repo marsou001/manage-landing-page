@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Props } from "../../../types";
 
 const Container = styled.div`
   margin-bottom: 45px;
@@ -9,6 +10,9 @@ const Container = styled.div`
     padding-left: 25px;
     >li {
       padding-block: 10px;
+      &:hover {
+        color: ${(props: Props) => props.theme.colors.primary.brightRed};
+      }
     }
   }
 `;
