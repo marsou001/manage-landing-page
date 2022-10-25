@@ -20,6 +20,21 @@ const Container = styled.div`
       fill: ${(props: Props) => props.theme.colors.primary.brightRed};
     }
   }
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.xs}) {
+    display: block;
+    margin-inline: auto;
+    >svg {
+      margin-right: 35px;
+    }
+  }
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+    margin: 0;
+    padding-right: 37px;
+    >svg {
+      margin-right: 15px;
+      transform: scale(1);
+    }
+  }
 `;
 
 function SocialMediaLinks() {

@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { Props } from "../../../types";
 import SubscribeFormButton from "./SubscribeFormButton/SubscribeFormButton";
 import SubscribeFormInput from "./SubscribeFormInput/SubscribeFormInput";
 
 const Container = styled.form`
   margin-bottom: 45px;
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+    margin-bottom: 80px;
+  }
 `;
 
 

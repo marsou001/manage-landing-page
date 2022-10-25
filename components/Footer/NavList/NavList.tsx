@@ -8,11 +8,17 @@ const Container = styled.div`
     list-style-type: none;
     column-count: 2;
     padding-left: 25px;
+    margin: 0;
     >li {
-      padding-block: 10px;
+      padding-bottom: 20px;
       &:hover {
         color: ${(props: Props) => props.theme.colors.primary.brightRed};
       }
+    }
+  }
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+    >ul {
+      column-gap: 5rem;
     }
   }
 `;

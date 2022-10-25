@@ -1,15 +1,20 @@
 import styled from "styled-components";
+import { Props } from "../../types";
 
-type Props = {
+type TProps = {
   scheme: 'main' | 'secondary';
 }
 
 const Container = styled.div`
   text-align: center;
   margin-bottom: 45px;
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+    max-width: 185px;
+    margin-bottom: 85px;
+  }
 `;
 
-function Logo(props: Props) {
+function Logo(props: TProps) {
   const fill = props.scheme === 'main' ? '#FFF' : '#242D52';
 
   return (
@@ -19,4 +24,4 @@ function Logo(props: Props) {
   )
 }
 
-export default Logo
+export default Logo;
