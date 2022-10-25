@@ -5,7 +5,7 @@ import Left from './Left/Left';
 const Container = styled.section`
   display: flex;
   flex-direction: column;
-  margin-inline: 20px;
+  margin-left: 20px;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     flex-direction: row;
     justify-content: space-between;

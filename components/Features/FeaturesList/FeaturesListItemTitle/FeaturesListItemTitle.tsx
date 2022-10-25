@@ -6,7 +6,7 @@ const FeaturesListItemTitle = styled.h2`
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: .001rem;
-  width: 106%;
+  width: 100%;
   border-bottom-left-radius: 9rem;
   border-top-left-radius: 9rem;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
