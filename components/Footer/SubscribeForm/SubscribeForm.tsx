@@ -5,16 +5,15 @@ import SubscribeFormInput from "./SubscribeFormInput/SubscribeFormInput";
 
 const Container = styled.form`
   margin-bottom: 45px;
-  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
     margin-bottom: 80px;
   }
 `;
 
-
 function SubscribeForm () {
   return (
     <Container>
-      <SubscribeFormInput type="text" placeholder="Updates in your inbox..." />
+      <SubscribeFormInput type="text" placeholder="Updates in your inbox..." aria-placeholder="Updates in your inbox..." />
       <SubscribeFormButton type="submit">GO</SubscribeFormButton>
     </Container>
   )

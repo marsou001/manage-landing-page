@@ -17,17 +17,17 @@ const Container = styled.div`
     cursor: pointer;
     transform: scale(1.6);
     &:hover {
-      fill: ${(props: Props) => props.theme.colors.primary.brightRed};
+      fill: ${(props: Props) => props.theme.colors?.primary.brightRed};
     }
   }
-  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.xs}) {
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.xs}) {
     display: block;
     margin-inline: auto;
     >svg {
       margin-right: 35px;
     }
   }
-  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints.md}) {
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
     margin: 0;
     padding-right: 37px;
     >svg {
@@ -39,7 +39,7 @@ const Container = styled.div`
 
 function SocialMediaLinks() {
   return (
-    <Container>
+    <Container data-testid="social-media">
       <FacebookLogo />
       <YoutubeLogo />
       <TwitterLogo />
