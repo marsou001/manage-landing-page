@@ -5,7 +5,7 @@ import Nav from "./Nav/Nav";
 import ListItemLink from "./ListItemLink/ListItemLink";
 
 const Container = styled.div`
-  color: ${(props) => props.theme.colors.primary.darkBlue};
+  color: ${(props) => props.theme.colors?.primary.darkBlue};
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.01),
@@ -17,7 +17,7 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     display: none;
   }
 `;
