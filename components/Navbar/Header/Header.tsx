@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import logo from "../../../public/images/logo.svg";
 import iconHamburger from "../../../public/images/icon-hamburger.svg";
-import iconClose from "../../../public/images/icon-close.svg";
-import Hamburger from "./Hamburger/Hamburger";
 import Logo from "./Logo/Logo";
 import Nav from "./Nav/Nav";
 import GetStartedButton from "./GetStartedButton/GetStartedButton";
+import IconOpen from "./IconOpen/IconOpen";
 
 const Container = styled.header`
   display: flex;
@@ -17,7 +16,7 @@ const Container = styled.header`
   }
 `;
 
-function Header({ isActive, handleClick, handleKeyDown }) {
+function Header({ isActive, openDialog, handleKeyDown }) {
   return (
     <Container>
       <Logo>
@@ -25,14 +24,15 @@ function Header({ isActive, handleClick, handleKeyDown }) {
           <img src={logo} alt="logo" />
         </a>
       </Logo>
-      <Hamburger
-        tabIndex={0}
-        className="hamburger"
-        onClick={handleClick}
+      <IconOpen
+        isActive={isActive}
+        tabIndex={isActive ? -1 : 0}
+        aria-hidden={isActive}
+        onClick={openDialog}
         onKeyDown={handleKeyDown}
       >
-        <img src={isActive ? iconClose : iconHamburger} alt="show/hide navigation" />
-      </Hamburger>
+        <img src={iconHamburger} alt="Show dialog" />
+      </IconOpen>
       <Nav />
       <GetStartedButton href="#">Get Started</GetStartedButton>
     </Container>

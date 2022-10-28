@@ -3,6 +3,9 @@ import List from "./List/List";
 import ListItem from "./ListItem/ListItem";
 import Nav from "./Nav/Nav";
 import ListItemLink from "./ListItemLink/ListItemLink";
+import iconClose from "../../../public/images/icon-close.svg";
+import { useRef } from "react";
+import IconClose from "../Header/IconClose/IconClose";
 
 const Container = styled.div`
   color: ${(props) => props.theme.colors?.primary.darkBlue};
@@ -22,9 +25,53 @@ const Container = styled.div`
   }
 `;
 
-function Dialog() {
+function Dialog({ isActive, closeDialog }) {
+  const closeRef = useRef<HTMLDivElement>(null);
+  const lastItemRef = useRef<HTMLAnchorElement>(null);
+
+  const focusOnCloseIcon = () => {
+    const closeIcon = closeRef.current;
+    closeIcon.focus();
+  }
+
+  const focusOnLastItem = () => {
+    const lastItem = lastItemRef.current;
+    lastItem.focus();
+  }
+
+  const handleCloseIconKeyDown = (e: KeyboardEvent) => {
+    if (e.shiftKey && e.code === 'Tab') {
+      focusOnLastItem();
+      e.preventDefault();
+    } else if (e.code === 'Enter') {
+      closeDialog();
+    }
+  }
+
+  const handleLastItemKeyDown = (e: KeyboardEvent) => {
+    if (e.code === 'Tab' && !e.shiftKey) {
+      focusOnCloseIcon();
+      e.preventDefault();
+    }
+  }
+
   return (
-    <Container role="dialog" aria-modal="true">
+    <Container 
+      role="dialog" 
+      aria-modal="true" 
+      aria-labelledby="nav" 
+      aria-describedby="nav"
+    >
+      <IconClose
+        isActive={isActive}
+        ref={closeRef}
+        tabIndex={0}
+        style={{ position: 'absolute', top: 35, right: 25 }}
+        onClick={closeDialog}
+        onKeyDown={handleCloseIconKeyDown}
+      >
+        <img src={iconClose} alt="Hide dialog" />
+      </IconClose>
       <Nav>
         <List>
           <ListItem>
@@ -40,7 +87,7 @@ function Dialog() {
             <ListItemLink href="#">Careers</ListItemLink>
           </ListItem>
           <ListItem>
-            <ListItemLink href="#">Community</ListItemLink>
+            <ListItemLink href="#" ref={lastItemRef} onKeyDown={handleLastItemKeyDown} id="as">Community</ListItemLink>
           </ListItem>
         </List>
       </Nav>

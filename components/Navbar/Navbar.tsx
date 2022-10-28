@@ -1,21 +1,36 @@
 import { useState } from "react";
 import Header from "./Header/Header";
 import Dialog from "./Dialog/Dialog";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, DefaultTheme, GlobalStyleComponent } from "styled-components";
+
+let GlobalStyle = createGlobalStyle`
+  body {
+    overflow-y: initial;
+  }
+`;
+
+function setGlobalStyle(value: boolean) {
+  GlobalStyle = createGlobalStyle`
+    body {
+      overflow-y: ${value ? 'hidden' : 'initial'};
+    }
+  `;
+}
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
-  const GlobalStyle = createGlobalStyle`
-    body {
-      overflow-y: ${isActive ? 'hidden' : 'initial'};
-    }
-  `;
 
-  const handleClick = () => setIsActive((prevState) => !prevState);
+  const setState = (val: boolean) => {
+    setIsActive(val);
+    setGlobalStyle(val);
+  }
 
-  const handleKeyDown = (e) => {
+  const openDialog = () => setState(true);
+  const closeDialog = () => setState(false);
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (e.code === "Enter") {
       setIsActive((prevState) => !prevState);
+      setGlobalStyle(isActive);
     }
   };
 
@@ -24,10 +39,14 @@ function Navbar() {
       <GlobalStyle />
       <Header
         isActive={isActive}
-        handleClick={handleClick}
+        openDialog={openDialog}
         handleKeyDown={handleKeyDown}
       />
-      {isActive && <Dialog />}
+      {isActive && <Dialog 
+        isActive={isActive}
+        closeDialog={closeDialog}
+        handleKeyDown={handleKeyDown}
+      />}
     </>
   );
 }

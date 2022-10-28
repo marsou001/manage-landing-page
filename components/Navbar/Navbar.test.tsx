@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
-import { screen } from '@testing-library/dom';
+import { fireEvent, screen } from '@testing-library/dom';
+import userEvent from '@testing-library/user-event';
 import Navbar from './Navbar';
 
 describe("the header", () => {
@@ -18,12 +19,31 @@ describe("the header", () => {
   })
 });
 
-// describe("the dialog", () => {
-//   it("renders", () => {
-//     render(<Navbar />);
+describe("accessibility", () => {
+  render(<Navbar />);    
 
-//     const Dialog = screen.getByRole("dialog");
+  const hamburger = screen.getByAltText("show/hide navigation");
+  fireEvent.keyDown(hamburger, { key: 'Enter', code: 'Enter', charCode: 13 });
 
-//     expect(Dialog).toBeInTheDocument();
-//   })
-// })
+  const Dialog = screen.getByRole("dialog");
+  expect(Dialog).toBeInTheDocument();
+})
+
+describe("the dialog", () => {
+  beforeEach(() => {
+    render(<Navbar />);    
+
+    const hamburger = screen.getByAltText("show/hide navigation");
+    userEvent.click(hamburger);
+  });
+
+  it("renders", () => {
+    const Dialog = screen.getByRole("dialog");
+    expect(Dialog).toBeInTheDocument();
+  })
+
+  it("renders nav", () => {
+    const nav = screen.getByRole('navigation');
+    expect(nav).toBeInTheDocument();
+  })
+})
