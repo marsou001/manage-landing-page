@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "./Header/Header";
 import Dialog from "./Dialog/Dialog";
-import { createGlobalStyle, DefaultTheme, GlobalStyleComponent } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 let GlobalStyle = createGlobalStyle`
   body {
@@ -45,7 +45,6 @@ function Navbar() {
       {isActive && <Dialog 
         isActive={isActive}
         closeDialog={closeDialog}
-        handleKeyDown={handleKeyDown}
       />}
     </>
   );

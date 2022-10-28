@@ -4,7 +4,7 @@ import ListItem from "./ListItem/ListItem";
 import Nav from "./Nav/Nav";
 import ListItemLink from "./ListItemLink/ListItemLink";
 import iconClose from "../../../public/images/icon-close.svg";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import IconClose from "../Header/IconClose/IconClose";
 
 const Container = styled.div`
@@ -26,8 +26,14 @@ const Container = styled.div`
 `;
 
 function Dialog({ isActive, closeDialog }) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLDivElement>(null);
   const lastItemRef = useRef<HTMLAnchorElement>(null);
+
+  const focusOnContainer = () => {
+    const container = containerRef.current;
+    container.focus();
+  }
 
   const focusOnCloseIcon = () => {
     const closeIcon = closeRef.current;
@@ -55,12 +61,25 @@ function Dialog({ isActive, closeDialog }) {
     }
   }
 
+  const handleEscape = (e: KeyboardEvent) => {
+    if (e.code === "Escape") {
+      closeDialog();
+    }
+  }
+
+  useEffect(() => {
+    focusOnContainer();
+  }, []);
+
   return (
     <Container 
+      tabIndex={0}
+      ref={containerRef}
       role="dialog" 
       aria-modal="true" 
       aria-labelledby="nav" 
       aria-describedby="nav"
+      onKeyDown={handleEscape}
     >
       <IconClose
         isActive={isActive}
