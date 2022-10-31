@@ -9,6 +9,9 @@ const SubscribeFormButton = styled.button`
   padding: 15px 30px;
   border: none;
   border-radius: 9999px;
+  &:hover {
+    background-color: ${(props: Props) => props.theme.colors?.neutral.veryPaleRed};
+  }
 `;
 
 export default SubscribeFormButton;

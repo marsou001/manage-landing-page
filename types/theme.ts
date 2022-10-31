@@ -16,7 +16,7 @@ type Primary = {
 type Neutral = {
   darkGrayishBlue: "hsl(227, 12%, 61%)",
   veryDarkBlue: "hsl(233, 12%, 13%)",
-  veryPaleRed: "hsl(13, 100%, 96%)",
+  veryPaleRed: "hsl(13, 88%, 69%)",
   veryLightGray: "hsl(0, 0%, 98%)",
 }
 
