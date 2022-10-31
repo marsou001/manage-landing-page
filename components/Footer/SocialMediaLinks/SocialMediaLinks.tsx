@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import { Props } from "../../../types";
 import FacebookLogo from "./FacebookLogo/FacebookLogo";
-import InstagramLogo from "./FacebookLogo/InstagramLogo";
-import PinterestLogo from "./FacebookLogo/PinterestLogo";
-import TwitterLogo from "./FacebookLogo/TwitterLogo";
-import YoutubeLogo from "./FacebookLogo/YoutubeLogo";
+import InstagramLogo from "./InstagramLogo/InstagramLogo";
+import PinterestLogo from "./PinterestLogo/PinterestLogo";
+import TwitterLogo from "./TwitterLogo/TwitterLogo";
+import YoutubeLogo from "./YoutubeLogo/YoutubeLogo";
 
 const Container = styled.div`
   display: flex;
