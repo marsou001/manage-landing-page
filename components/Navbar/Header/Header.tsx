@@ -31,7 +31,7 @@ function Header({ isActive, openDialog, handleKeyDown }) {
         onClick={openDialog}
         onKeyDown={handleKeyDown}
       >
-        <img src={iconHamburger} alt="Show dialog" />
+        <img src={iconHamburger} title="Show dialog" alt="Show dialog" />
       </IconOpen>
       <Nav />
       <GetStartedButton href="#">Get Started</GetStartedButton>

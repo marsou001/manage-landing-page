@@ -89,7 +89,7 @@ function Dialog({ isActive, closeDialog }) {
         onClick={closeDialog}
         onKeyDown={handleCloseIconKeyDown}
       >
-        <img src={iconClose} alt="Hide dialog" />
+        <img src={iconClose} title="Hide dialog" alt="Hide dialog" />
       </IconClose>
       <Nav>
         <List>
