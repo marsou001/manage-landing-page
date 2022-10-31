@@ -39,11 +39,13 @@ function SubscribeForm () {
           placeholder="Updates in your inbox..." 
           aria-placeholder="Updates in your inbox..." 
           isValid={isValid}
+          aria-invalid={isValid}
+          aria-errormessage="error-message"
           value={email} 
           onChange={handleChange} 
         />
 
-        {!isValid && <SubscribeErrorMessage>Please insert a valid email</SubscribeErrorMessage>}
+        {!isValid && <SubscribeErrorMessage id="error-message" role="alert">Please insert a valid email</SubscribeErrorMessage>}
       </div>
       <SubscribeFormButton type="submit">GO</SubscribeFormButton>
     </Container>
