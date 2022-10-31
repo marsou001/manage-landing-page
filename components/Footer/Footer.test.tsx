@@ -52,6 +52,26 @@ describe("Footer", () => {
   it("contains social media links", () => {
     const containers = screen.getAllByTestId("social-media");
     containers.forEach((container) => expect(container).toBeInTheDocument());
+
+    // Facebook
+    const facebookLink = screen.getAllByTestId("facebook-link");
+    facebookLink.forEach(element => expect(element).toBeInTheDocument());
+
+    // Youtube
+    const youtubeLink = screen.getAllByTestId("youtube-link");
+    youtubeLink .forEach(element => expect(element).toBeInTheDocument());
+
+    // Twitter
+    const twitterLink = screen.getAllByTestId("twitter-link");
+    twitterLink.forEach(element => expect(element).toBeInTheDocument());
+
+    // Pinterest
+    const pinterestLink = screen.getAllByTestId("pinterest-link");
+    pinterestLink.forEach(element => expect(element).toBeInTheDocument());
+
+    // Instagram
+    const instagramLink = screen.getAllByTestId("instagram-link");
+    instagramLink.forEach(element => expect(element).toBeInTheDocument());
   })
 
   it("contains logo", () => {

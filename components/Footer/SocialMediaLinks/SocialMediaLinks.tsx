@@ -46,11 +46,11 @@ const Container = styled.div`
 function SocialMediaLinks() {
   return (
     <Container data-testid="social-media">
-      <a href="#"><FacebookLogo /></a>
-      <a href="#"><YoutubeLogo /></a>
-      <a href="#"><TwitterLogo /></a>
-      <a href="#"><PinterestLogo /></a>
-      <a href="#"><InstagramLogo /></a>
+      <a href="#" data-testid="facebook-link"><FacebookLogo /></a>
+      <a href="#" data-testid="youtube-link"><YoutubeLogo /></a>
+      <a href="#" data-testid="twitter-link"><TwitterLogo /></a>
+      <a href="#" data-testid="pinterest-link"><PinterestLogo /></a>
+      <a href="#" data-testid="instagram-link"><InstagramLogo /></a>
     </Container>
   )
 }
