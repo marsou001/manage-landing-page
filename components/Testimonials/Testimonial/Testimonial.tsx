@@ -33,19 +33,18 @@ const TestimonialQuote = styled.blockquote`
   line-height: 1.7rem;
 `;
 
-function Testimonial({ image, name, quote }: TestimonialProps) {
+function Testimonial ({ image, name, quote }: TestimonialProps) {
   return (
     <Container>
       <div>
-
-      <Avatar>
-        <AvatarImage src={image} />
-      </Avatar>
-      <Name>{ name }</Name>
-      <TestimonialQuote>{ quote }</TestimonialQuote>
+        <Avatar>
+          <AvatarImage src={image} />
+        </Avatar>
+        <Name>{ name }</Name>
+        <TestimonialQuote>{ quote }</TestimonialQuote>
       </div>
     </Container>
   )
-}
+};
 
 export default Testimonial;

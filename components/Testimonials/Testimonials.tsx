@@ -19,7 +19,7 @@ const Container = styled.section`
 
 function Testimonials() {
   const options: Options = {
-    rewind: false,
+    type: 'loop',
     gap: 20,
     padding: "3rem",
     mediaQuery: 'min',
@@ -40,13 +40,11 @@ function Testimonials() {
       <Title>What they've said</Title>
       
       <Splide options={options} >
-        {testimonials.map(testimonial => {
-          return (
-            <SplideSlide key={testimonial.name} className="slide">
-              <Testimonial slide={testimonial.slide} image={testimonial.image} name={testimonial.name} quote={testimonial.quote} />
-            </SplideSlide>
-          );
-        })}
+        {testimonials.map(testimonial => (
+          <SplideSlide key={testimonial.name} className="slide">
+            <Testimonial slide={testimonial.slide} image={testimonial.image} name={testimonial.name} quote={testimonial.quote} />
+          </SplideSlide>
+        ))}
       </Splide>
 
       <CallToAction>Get Started</CallToAction>
