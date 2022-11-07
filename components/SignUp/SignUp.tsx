@@ -25,7 +25,8 @@ const Container = styled.section`
 function SignUp() {
   return (
     <Container>
-      <BackgroundShape top={-90} right={113} />
+      <BackgroundShape left={1500} mdTop={-500} mdLeft={1180}/>
+      <BackgroundShape top={-90} left={-533} smTop={-180} smLeft={-113} mdLeft={23} />
       <p>Simplify how your team works today.</p>
       <CallToAction scheme="secondary">Get Started</CallToAction>
     </Container>
