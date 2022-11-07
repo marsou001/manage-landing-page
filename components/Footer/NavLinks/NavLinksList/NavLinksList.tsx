@@ -7,12 +7,6 @@ const NavLinksList = styled.ul`
   column-count: 2;
   padding-left: 25px;
   margin: 0;
-  >li {
-    padding-bottom: 20px;
-    &:hover {
-      color: ${(props: Props) => props.theme.colors?.primary.brightRed};
-    }
-  }
   @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
     column-gap: 5rem;
   }

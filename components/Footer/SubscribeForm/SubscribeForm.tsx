@@ -8,7 +8,7 @@ import SubscribeFormInput from "./SubscribeFormInput/SubscribeFormInput";
 const Container = styled.form`
   margin-bottom: 45px;
   @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
   >div {
     position: relative;
