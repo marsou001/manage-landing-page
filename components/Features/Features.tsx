@@ -18,7 +18,7 @@ const Container = styled.section`
 
 function Features() {
   return (
-    <Container>
+    <Container className="features">
       <Left />
       <FeaturesList />
     </Container>

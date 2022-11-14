@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar/Navbar";
-import BackgroundShape from '../shared/ui/BackgroundShape';
 import Hero from "../components/Hero/Hero";
 import Features from "../components/Features/Features";
 import Head from "next/head";
@@ -17,23 +16,13 @@ export default function Home() {
       </Head>
       <Navbar />
       <main>
-        {/* <BackgroundShape top={-380} left={-20} mdTop={-230} mdLeft={780} scale={1.1} beneath /> */}
-        {/* <BackgroundShape top={-330} left={-80} mdTop={-230} mdLeft={780} beneath /> */}
-        <BackgroundShape top={0} beneath />
-        {/* <div style={{ 
-          width: 300, 
-          height: 300, 
-          backgroundColor: 'green', 
-          position: 'absolute',
-          top: 40,
-          right: 0
-        }}></div> */}
         <Hero />
         <Features />
         <Testimonials />
         <SignUp />
-        <Footer />
       </main>
+
+      <Footer />
     </>
   );
 }
