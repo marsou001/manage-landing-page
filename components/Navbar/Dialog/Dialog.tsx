@@ -4,7 +4,7 @@ import ListItem from "./ListItem/ListItem";
 import Nav from "./Nav/Nav";
 import ListItemLink from "./ListItemLink/ListItemLink";
 import iconClose from "../../../public/images/icon-close.svg";
-import { useEffect, useRef } from "react";
+import { KeyboardEvent, useEffect, useRef } from "react";
 import IconClose from "../Header/IconClose/IconClose";
 
 const Container = styled.div`
