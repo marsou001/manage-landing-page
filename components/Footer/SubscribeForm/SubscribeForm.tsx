@@ -18,17 +18,17 @@ const Container = styled.form`
 
 function SubscribeForm () {
   const [email, setEmail] = useState("");
-  const [isValid, setIsValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   const handleChange = (e: ChangeEvent) => {
     const target = e.target as HTMLInputElement;
     setEmail(target.value);
-    setIsValid(checkIsValid(target.value));
+    setIsEmailValid(checkIsEmailValid(target.value));
   }
 
-  const checkIsValid = (text: string): boolean => {
+  const checkIsEmailValid = (email: string): boolean => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    return text.length === 0 || regex.test(text);
+    return email.length === 0 || regex.test(email);
   }
 
   return (
@@ -38,14 +38,14 @@ function SubscribeForm () {
           type="text" 
           placeholder="Updates in your inbox..." 
           aria-placeholder="Updates in your inbox..." 
-          isValid={isValid}
-          aria-invalid={isValid}
+          isValid={isEmailValid}
+          aria-invalid={isEmailValid}
           aria-errormessage="error-message"
           value={email} 
           onChange={handleChange} 
         />
 
-        {!isValid && <SubscribeErrorMessage id="error-message" role="alert">Please insert a valid email</SubscribeErrorMessage>}
+        {!isEmailValid && <SubscribeErrorMessage id="error-message" role="alert">Please insert a valid email</SubscribeErrorMessage>}
       </div>
       <SubscribeFormButton type="submit">GO</SubscribeFormButton>
     </Container>
