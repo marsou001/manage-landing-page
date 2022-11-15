@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import styled from "styled-components";
 import { Props } from "../../../types";
 import SubscribeErrorMessage from "./SubscribeErrorMessage/SubscribeErrorMessage";
@@ -20,7 +20,7 @@ function SubscribeForm () {
   const [email, setEmail] = useState("");
   const [isValid, setIsValid] = useState(true);
 
-  const handleChange = (e: Event) => {
+  const handleChange = (e: ChangeEvent) => {
     const target = e.target as HTMLInputElement;
     setEmail(target.value);
     setIsValid(checkIsValid(target.value));
