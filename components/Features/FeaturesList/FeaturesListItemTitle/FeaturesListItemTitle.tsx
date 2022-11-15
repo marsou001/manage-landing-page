@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const FeaturesListItemTitle = styled.h2`
   color: ${props => props.theme.colors?.primary.darkBlue};
-  background-color: ${props => props.theme.colors?.neutral.veryPaleRed};
+  background-color: hsla(12, 88%, 59%, 0.1);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: .001rem;
