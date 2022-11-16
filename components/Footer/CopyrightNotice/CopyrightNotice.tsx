@@ -5,6 +5,9 @@ const Container = styled.div`
   color: ${(props: Props) => props.theme.colors?.neutral.darkGrayishBlue};
   font-size: .8rem;
   text-align: center;
+  @media screen and (min-width: ${(props: Props) => props.theme.breakpoints?.md}) {
+    text-align: right;
+  }
 `;
 
 function CopyrightNotice() {
