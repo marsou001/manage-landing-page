@@ -7,6 +7,8 @@ const Header = styled.h1`
   margin-inline: auto;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     font-size: 2.1rem;
+    max-width: 80%;
+    margin-inline: 0;
   }
 `;
 

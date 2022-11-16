@@ -6,7 +6,6 @@ const Container = styled.div`
   text-align: center;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
     text-align: left;
-    max-width: 40%;
   }
 `;
 

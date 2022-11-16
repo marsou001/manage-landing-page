@@ -5,10 +5,11 @@ const Paragraph = styled.p`
   font-size: .9rem;
   line-height: 1.7rem;
   margin-bottom: 1.5rem;
-  width: 78%;
+  width: 90%;
   margin-inline: auto;
   @media screen and (min-width: ${(props) => props.theme.breakpoints?.sm}) {
-    width: 100%;
+    max-width: 55%;
+    margin-inline: 0;
   }
 `;
 
